@@ -21,13 +21,16 @@ else
 				mkdir ~/.node-red	
 			fi
 
+
 			echo "change current dir to ~/.node-red"
 			cd ~/.node-red
 			echo 'arrived at $PWD'
 			echo ""
 
+			export RESULT_DIR=$(pwd)
+
 			echo "copy flows and setting file to ~/.node-red"
-			cp "$cwd/flows.json" ~/.node-red/
+			cp "$cwd/flows.json" "$cwd/settings.js" ~/.node-red/
 			echo ""
 			echo 'Start install dependency'
 			echo '-----------------------------------------------'
@@ -36,6 +39,7 @@ else
 			npm install node-red-contrib-interval-switch
 			npm install node-red-contrib-linux-memory
 			npm install node-red-contrib-loop
+			npm install performance-now
 
 			echo '-----------------------------------------------'
 			echo "Install dependency successful"
