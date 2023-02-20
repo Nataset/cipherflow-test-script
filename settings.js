@@ -463,6 +463,7 @@ module.exports = {
      */
     functionGlobalContext: {
 	    now:require('performance-now'),
+	    fs:require('fs')
         // os:require('os'),
     },
 

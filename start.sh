@@ -34,18 +34,45 @@ else
 			echo ""
 			echo 'Start install dependency'
 			echo '-----------------------------------------------'
-			npm install node-red-cipherflow
-			npm install node-red-contrib-cpu
-			npm install node-red-contrib-interval-switch
-			npm install node-red-contrib-linux-memory
-			npm install node-red-contrib-loop
-			npm install performance-now
+
+			if [ ! -d "$(pwd)/node_modules/node-red-cipherflow" ]; then
+  				echo "Installing cipherflow"
+				npm install node-red-cipherflow
+			fi
+
+
+			if [ ! -d "$(pwd)/node_modules/node-red-contrib-cpu" ]; then
+  				echo "Installing cipherflow"
+				npm install node-red-contrib-cpu
+			fi
+
+			if [ ! -d "$(pwd)/node_modules/node-red-contrib-interval-switch" ]; then
+  				echo "Installing cipherflow"
+				npm install node-red-contrib-interval-switch
+			fi
+
+			if [ ! -d "$(pwd)/node_modules/node-red-contrib-linux-memory" ]; then
+  				echo "Installing cipherflow"
+				npm install node-red-contrib-linux-memory
+			fi
+
+			if [ ! -d "$(pwd)/node_modules/node-red-contrib-loop" ]; then
+  				echo "Installing cipherflow"
+				npm install node-red-contrib-loop
+			fi
+
+			if [ ! -d "$(pwd)/node_modules/performance-now" ]; then
+  				echo "Installing cipherflow"
+				npm install performance-now
+			fi
 
 			echo '-----------------------------------------------'
 			echo "Install dependency successful"
 			echo ""
-
-
+			read -p "Please Enter number of iterations you would like to run [default 20]: " loop
+			export CPU_LOOP_NUMBER="$loop"
+			export TIME_LOOP_NUMBER="$loop"
+			export MEMORY_LOOP_NUMBER="$loop"
 
 			echo '------------------------------------------------------------------'
 			echo '------------------------------------------------------------------'
