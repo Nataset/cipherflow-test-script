@@ -42,27 +42,27 @@ else
 
 
 			if [ ! -d "$(pwd)/node_modules/node-red-contrib-cpu" ]; then
-  				echo "Installing cipherflow"
+  				echo "Installing node-red-contrib-cpu"
 				npm install node-red-contrib-cpu
 			fi
 
 			if [ ! -d "$(pwd)/node_modules/node-red-contrib-interval-switch" ]; then
-  				echo "Installing cipherflow"
+  				echo "Installing interval-switch"
 				npm install node-red-contrib-interval-switch
 			fi
 
 			if [ ! -d "$(pwd)/node_modules/node-red-contrib-linux-memory" ]; then
-  				echo "Installing cipherflow"
+  				echo "Installing node-red-contrib-linux-memory"
 				npm install node-red-contrib-linux-memory
 			fi
 
 			if [ ! -d "$(pwd)/node_modules/node-red-contrib-loop" ]; then
-  				echo "Installing cipherflow"
+  				echo "Installing node-red-contrib-loop"
 				npm install node-red-contrib-loop
 			fi
 
 			if [ ! -d "$(pwd)/node_modules/performance-now" ]; then
-  				echo "Installing cipherflow"
+  				echo "Installing performnace-now"
 				npm install performance-now
 			fi
 
